@@ -1,8 +1,12 @@
 import time
 
 # 1. Carrega os dados primeiro (Fora da medição de tempo)
-with open("1000_numbers.txt", "r") as arquivo:
-    lista_array = [int(linha.strip()) for linha in arquivo]
+with open("10000_numbers.txt", "r") as arquivo:
+    lista_array = [
+    int(linha.strip())
+    for linha in arquivo
+    if linha.strip()
+]
 
 # 2. INÍCIO DA MEDIÇÃO (Apenas o algoritmo)
 tempo_inicial = time.perf_counter()
